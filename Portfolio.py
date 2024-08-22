@@ -13,8 +13,8 @@ class Portfolio():
         period_in_years = (end_date - start_date).days / 365
 
         for stock in self.stocks:
-            portfolio_starting_value += stock.price(start_date)
-            portfolio_ending_value += stock.price(end_date)
+            portfolio_starting_value += stock.Price(start_date)
+            portfolio_ending_value += stock.Price(end_date)
 
         portfolio_profit = portfolio_ending_value - portfolio_starting_value
         annualized_return = ((portfolio_ending_value/portfolio_starting_value)**(1/period_in_years)) - 1
